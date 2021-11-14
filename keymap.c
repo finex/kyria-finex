@@ -158,7 +158,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_NUMBER] = LAYOUT(
        XXXXXXX, KC_LBRC, KC_7   , KC_8   , KC_9   , KC_RBRC,                                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-       XXXXXXX, KC_SCLN, KC_4   , KC_5   , KC_6   , KC_EQL ,                                     XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, XXXXXXX,
+       XXXXXXX, KC_SCLN, KC_4   , KC_5   , KC_6   , KC_SLCK,                                     XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, XXXXXXX,
        XXXXXXX, KC_GRV , KC_1   , KC_2   , KC_3   , KC_BSLS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ALGR, XXXXXXX, XXXXXXX,
                                   XXXXXXX, XXXXXXX, KC_DOT , KC_0   , KC_MINS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     ),
@@ -210,7 +210,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * DO NOT edit the rev1.c file; instead override the weakly defined default functions by your own.
  */
 
-/* DELETE THIS LINE TO UNCOMMENT (1/2)
 #ifdef OLED_ENABLE
 oled_rotation_t oled_init_user(oled_rotation_t rotation) { return OLED_ROTATION_180; }
 
@@ -236,11 +235,19 @@ void oled_task_user(void) {
             case _COLEMAK_DH:
                 oled_write_P(PSTR("Colemak-DH\n"), false);
                 break;
-            case _NAV:
+            case _MEDIA:
+                oled_write_P(PSTR("Media\n"), false);
+            case _NAVIGATION:
                 oled_write_P(PSTR("Nav\n"), false);
                 break;
-            case _SYM:
+            case _MOUSE:
+                oled_write_P(PSTR("Mouse\n"), false);
+                break;
+            case _SYMBOL:
                 oled_write_P(PSTR("Sym\n"), false);
+                break;
+            case _NUMBER:
+                oled_write_P(PSTR("Number\n"), false);
                 break;
             case _FUNCTION:
                 oled_write_P(PSTR("Function\n"), false);
@@ -275,6 +282,7 @@ void oled_task_user(void) {
 }
 #endif
 
+ /*
 #ifdef ENCODER_ENABLE
 bool encoder_update_user(uint8_t index, bool clockwise) {
 
