@@ -54,12 +54,3 @@
 #define MOUSEKEY_MAX_SPEED      6
 #undef MOUSEKEY_TIME_TO_MAX
 #define MOUSEKEY_TIME_TO_MAX    64
-
-
-
-#ifndef NO_DEBUG
-#define NO_DEBUG
-#endif // !NO_DEBUG
-#if !defined(NO_PRINT) && !defined(CONSOLE_ENABLE)
-#define NO_PRINT
-#endif // !NO_PRINT
