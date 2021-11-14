@@ -18,8 +18,8 @@
 // Layers
 enum layers {
     _QWERTY = 0,
-    /* _COLEMAK_DH, */
-    /* _MEDIA, */
+    _COLEMAK_DH,
+    _MEDIA,
     _NAVIGATION,
     _MOUSE,
     _SYMBOL,
@@ -46,7 +46,7 @@ enum layers {
 // - Layer / Tap
 #define LT_ADEN LT(_ADJUST, KC_END)
 #define LT_ADPU LT(_ADJUST, KC_PGUP)
-/* #define LT_MEES LT(_MEDIA, KC_ESC) */
+#define LT_MEES LT(_MEDIA, KC_ESC)
 #define LT_NASP LT(_NAVIGATION, KC_SPACE)
 #define LT_MOTA LT(_MOUSE, KC_TAB)
 #define LT_SYEN LT(_SYMBOL, KC_ENTER)
@@ -100,28 +100,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      KC_ESC  , KC_Q    , KC_W    , KC_E    , KC_R    , KC_T    ,                                            KC_Y    , KC_U    , KC_I    , KC_O    , KC_P    , TG_NUM  ,
      KC_TAB  , QHGA    , QHAS    , QHCD    , QHSF    , KC_G    ,                                            KC_H    , QHSJ    , QHCK    , QHAL    , QHGQUOT , KC_GRV  ,
      KC_LSPO , KC_Z    , KC_X    , KC_C    , KC_V    , KC_B    , LT_ADPU , KC_PGDN ,    KC_HOME , LT_ADEN , KC_N    , KC_M    , KC_COMM , KC_DOT  , KC_SLSH , KC_RSPC ,
-                                   HYP_ENT , KC_BSPC , KC_ESC  , LT_NASP , LT_MOTA ,    LT_SYEN , LT_NUBS , LT_FUDE , KC_SPC  , MEH_TAB
+                                   HYP_ENT , KC_BSPC , LT_MEES , LT_NASP , LT_MOTA ,    LT_SYEN , LT_NUBS , LT_FUDE , KC_SPC  , MEH_TAB
     ),
 
-/* /\* */
-/*  * Alternative Layer: Colemak DH */
-/*  *\/ */
-/*     [_COLEMAK_DH] = LAYOUT( */
-/*      KC_ESC  , KC_Q    , KC_W    , KC_F    , KC_P    , KC_B    ,                                            KC_J    , KC_L    , KC_U    , KC_Y    , KC_QUOT , TG_NUM  , */
-/*      KC_TAB  , QHGA    , QHAR    , QHCS    , QHST    , KC_G    ,                                            KC_H    , QHSN    , QHCE    , QHAI    , QHGO    , KC_GRV  , */
-/*      KC_LSPO , KC_Z    , KC_X    , KC_C    , KC_D    , KC_V    , LT_ADPU , KC_PGDN ,    KC_HOME , LT_ADEN , KC_K    , KC_H    , KC_COMM , KC_DOT  , KC_SLSH , KC_RSPC , */
-/*                                    HYP_ENT , KC_BSPC , LT_MEES , LT_NASP , LT_MOTA ,    LT_SYEN , LT_NUBS , LT_FUDE , KC_SPC  , MEH_TAB */
-/*     ), */
+/*
+ * Alternative Layer: Colemak DH
+ */
+    [_COLEMAK_DH] = LAYOUT(
+     KC_ESC  , KC_Q    , KC_W    , KC_F    , KC_P    , KC_B    ,                                            KC_J    , KC_L    , KC_U    , KC_Y    , KC_QUOT , TG_NUM  ,
+     KC_TAB  , QHGA    , QHAR    , QHCS    , QHST    , KC_G    ,                                            KC_H    , QHSN    , QHCE    , QHAI    , QHGO    , KC_GRV  ,
+     KC_LSPO , KC_Z    , KC_X    , KC_C    , KC_D    , KC_V    , LT_ADPU , KC_PGDN ,    KC_HOME , LT_ADEN , KC_K    , KC_H    , KC_COMM , KC_DOT  , KC_SLSH , KC_RSPC ,
+                                   HYP_ENT , KC_BSPC , LT_MEES , LT_NASP , LT_MOTA ,    LT_SYEN , LT_NUBS , LT_FUDE , KC_SPC  , MEH_TAB
+    ),
 
-/* /\* */
-/*  * Media */
-/*  *\/ */
-/*     [_MEDIA] = LAYOUT( */
-/*        _______, _______, _______, _______, _______, _______,                                     U_RDO  , U_PST  , U_CPY  , U_CUT  , U_UND  , _______, */
-/*        _______, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, _______,                                     _______, KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT, _______, */
-/*        _______, _______, KC_ALGR, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, */
-/*                                   _______, _______, _______, _______, _______, KC_MSTP, KC_MPLY, KC_MUTE, _______, _______ */
-/*     ), */
+/*
+ * Media
+ */
+    [_MEDIA] = LAYOUT(
+       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                     U_RDO  , U_PST  , U_CPY  , U_CUT  , U_UND  , XXXXXXX,
+       XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,                                     XXXXXXX, KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT, XXXXXXX,
+       XXXXXXX, XXXXXXX, KC_ALGR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+                                  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MSTP, KC_MPLY, KC_MUTE, XXXXXXX, XXXXXXX
+    ),
 
 /*
  * Navigation
@@ -176,8 +176,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Adjust Layer: Default layer settings, RGB
  */
     [_ADJUST] = LAYOUT(
-      /* XXXXXXX, QWERTY , COLEMAK, XXXXXXX, XXXXXXX, XXXXXXX,                                    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, */
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX,
+      XXXXXXX, QWERTY , COLEMAK, XXXXXXX, XXXXXXX, XXXXXXX,                                    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX,
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                    RGB_TOG, RGB_SAI, RGB_HUI, RGB_VAI,  RGB_MOD, XXXXXXX,
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RGB_SAD, RGB_HUD, RGB_VAD, RGB_RMOD, XXXXXXX,
                                  XXXXXXX, XXXXXXX, XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
