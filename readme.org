@@ -1,0 +1,31 @@
+#+TITLE: Kyria Miryoku Extended
+#+AUTHOR: FiNeX (https://www.finex.org)
+#+DATE: 14/11/2021
+#+STARTUP: inlineimages
+
+* Table of contents :TOC_3:
+- [[#customized-miryoku-layoup-for-kyria-keyboard-by-leonardo-finex-finetti][Customized Miryoku layoup for Kyria keyboard by Leonardo (FiNeX) Finetti]]
+- [[#features][Features]]
+- [[#layout][Layout]]
+- [[#changelog][Changelog]]
+- [[#todo][Todo]]
+- [[#finex-qmk-layouts][FiNeX QMK Layouts]]
+
+* Customized Miryoku layoup for Kyria keyboard by Leonardo (FiNeX) Finetti
+This keymap recreate the Miryoku layout with some extra keys on the Kyria keyboard.
+
+* Features
+[ TODO]
+
+* Layout
+[ TODO ]
+
+* Changelog
+- 2021/11/14
+  First public release.
+
+* Todo
+[ TODO ]
+
+* FiNeX QMK Layouts
+All my custom QMK layouts are available on the following repo:  https://github.com/finex/qmk-keyboard-layouts-finex
