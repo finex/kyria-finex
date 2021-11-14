@@ -38,7 +38,7 @@ enum layers {
 // Base layout (qwerty / colemak)
 // Note: temporary switch that only persists until the keyboard loses power.
 #define QWERTY  DF(_QWERTY)
-/* #define COLEMAK DF(_COLEMAK_DH) */
+#define COLEMAK DF(_COLEMAK_DH)
 
 // Layers
 // - Toggle
