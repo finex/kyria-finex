@@ -7,5 +7,4 @@ RGBLIGHT_ENABLE = yes      # Enable keyboard RGB underglow
 COMMAND_ENABLE = no
 CONSOLE_ENABLE = no
 KEY_LOCK_ENABLE = yes
-TAP_DANCE_ENABLE = yes
 LTO_ENABLE = yes
