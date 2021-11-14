@@ -237,6 +237,7 @@ void oled_task_user(void) {
                 break;
             case _MEDIA:
                 oled_write_P(PSTR("Media\n"), false);
+                break;
             case _NAVIGATION:
                 oled_write_P(PSTR("Nav\n"), false);
                 break;
