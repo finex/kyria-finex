@@ -18,7 +18,7 @@
 // Layers
 enum layers {
     _QWERTY = 0,
-    _COLEMAK_DH,
+    /* _COLEMAK_DH, */
     _MEDIA,
     _NAVIGATION,
     _MOUSE,
@@ -38,7 +38,7 @@ enum layers {
 // Base layout (qwerty / colemak)
 // Note: temporary switch that only persists until the keyboard loses power.
 #define QWERTY  DF(_QWERTY)
-#define COLEMAK DF(_COLEMAK_DH)
+/* #define COLEMAK DF(_COLEMAK_DH) */
 
 // Layers
 // - Toggle
@@ -103,15 +103,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                    HYP_ENT , KC_BSPC , LT_MEES , LT_NASP , LT_MOTA ,    LT_SYEN , LT_NUBS , LT_FUDE , KC_SPC  , MEH_TAB
     ),
 
-/*
- * Alternative Layer: Colemak DH
- */
-    [_COLEMAK_DH] = LAYOUT(
-     KC_ESC  , KC_Q    , KC_W    , KC_F    , KC_P    , KC_B    ,                                            KC_J    , KC_L    , KC_U    , KC_Y    , KC_QUOT , TG_NUM  ,
-     KC_TAB  , QHGA    , QHAR    , QHCS    , QHST    , KC_G    ,                                            KC_H    , QHSN    , QHCE    , QHAI    , QHGO    , KC_GRV  ,
-     KC_LSPO , KC_Z    , KC_X    , KC_C    , KC_D    , KC_V    , LT_ADPU , KC_PGDN ,    KC_HOME , LT_ADEN , KC_K    , KC_H    , KC_COMM , KC_DOT  , KC_SLSH , KC_RSPC ,
-                                   HYP_ENT , KC_BSPC , LT_MEES , LT_NASP , LT_MOTA ,    LT_SYEN , LT_NUBS , LT_FUDE , KC_SPC  , MEH_TAB
-    ),
+/* /\* */
+/*  * Alternative Layer: Colemak DH */
+/*  *\/ */
+/*     [_COLEMAK_DH] = LAYOUT( */
+/*      KC_ESC  , KC_Q    , KC_W    , KC_F    , KC_P    , KC_B    ,                                            KC_J    , KC_L    , KC_U    , KC_Y    , KC_QUOT , TG_NUM  , */
+/*      KC_TAB  , QHGA    , QHAR    , QHCS    , QHST    , KC_G    ,                                            KC_H    , QHSN    , QHCE    , QHAI    , QHGO    , KC_GRV  , */
+/*      KC_LSPO , KC_Z    , KC_X    , KC_C    , KC_D    , KC_V    , LT_ADPU , KC_PGDN ,    KC_HOME , LT_ADEN , KC_K    , KC_H    , KC_COMM , KC_DOT  , KC_SLSH , KC_RSPC , */
+/*                                    HYP_ENT , KC_BSPC , LT_MEES , LT_NASP , LT_MOTA ,    LT_SYEN , LT_NUBS , LT_FUDE , KC_SPC  , MEH_TAB */
+/*     ), */
 
 /*
  * Media
@@ -176,7 +176,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Adjust Layer: Default layer settings, RGB
  */
     [_ADJUST] = LAYOUT(
-      _______, QWERTY , COLEMAK, _______, _______, _______,                                    _______, _______, _______, _______,  _______, _______,
+      /* _______, QWERTY , COLEMAK, _______, _______, _______,                                    _______, _______, _______, _______,  _______, _______, */
+      _______, _______, _______, _______, _______, _______,                                    _______, _______, _______, _______,  _______, _______,
       _______, _______, _______, _______, _______, _______,                                    RGB_TOG, RGB_SAI, RGB_HUI, RGB_VAI,  RGB_MOD, _______,
       _______, _______, _______, _______, _______, _______,_______, _______, _______, _______, _______, RGB_SAD, RGB_HUD, RGB_VAD, RGB_RMOD, _______,
                                  _______, _______, _______,_______, _______, _______, _______, _______, _______, _______
