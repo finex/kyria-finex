@@ -54,6 +54,7 @@ enum layers {
 #define LT_NUBS LT(_NUMBER, KC_BSPACE)
 #define LT_FUDE LT(_FUNCTION, KC_DEL)
 
+
 // Clipboard keys
 #define U_RDO C(KC_Y)
 #define U_PST C(KC_V)
@@ -88,7 +89,7 @@ enum layers {
 #define QHSN LSFT_T(KC_N)
 
 // Mod tap
-#define HYP_SPC HYPR_T(KC_SPACE)
+#define HYP_PRS HYPR_T(KC_PSCR)
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -100,7 +101,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      TG_BUTT , KC_Q    , KC_W    , KC_E    , KC_R    , KC_T    ,                                            KC_Y    , KC_U    , KC_I    , KC_O    , KC_P    , TG_NUM  ,
      KC_GRV  , QHGA    , QHAS    , QHCD    , QHSF    , KC_G    ,                                            KC_H    , QHSJ    , QHCK    , QHAL    , QHGSCLN , KC_QUOT ,
      KC_LSPO , KC_Z    , QHLX    , KC_C    , KC_V    , KC_B    , LT_ADPU , KC_PGDN ,    KC_HOME , LT_ADEN , KC_N    , KC_M    , KC_COMM , QHLD    , KC_SLSH , KC_RSPC ,
-                                   HYP_SPC , KC_ENT  , LT_MEES , LT_NASP , LT_MOTA ,    LT_SYEN , LT_NUBS , LT_FUDE , KC_DEL  , KC_MEH
+                                   HYP_PRS , KC_ENT  , LT_MEES , LT_NASP , LT_MOTA ,    LT_SYEN , LT_NUBS , LT_FUDE , XXXXXXX , KC_MEH
     ),
 
 *
@@ -110,7 +111,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      TG_BUTT , KC_Q    , KC_W    , KC_F    , KC_P    , KC_B    ,                                            KC_J    , KC_L    , KC_U    , KC_Y    , KC_SCLN , TG_NUM  ,
      KC_GRV  , QHGA    , QHAR    , QHCS    , QHST    , KC_G    ,                                            KC_M    , QHSN    , QHCE    , QHAI    , QHGO    , KC_QUOT ,
      KC_LSPO , KC_Z    , QHLX    , KC_C    , KC_D    , KC_V    , LT_ADPU , KC_PGDN ,    KC_HOME , LT_ADEN , KC_K    , KC_H    , KC_COMM , QHLD    , KC_SLSH , KC_RSPC ,
-                                   HYP_SPC , KC_ENT  , LT_MEES , LT_NASP , LT_MOTA ,    LT_SYEN , LT_NUBS , LT_FUDE , KC_DEL  , KC_MEH
+                                   HYP_PRS , KC_ENT  , LT_MEES , LT_NASP , LT_MOTA ,    LT_SYEN , LT_NUBS , LT_FUDE , XXXXXXX , KC_MEH
     ),
 
 /*
@@ -159,7 +160,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_NUMBER] = LAYOUT(
        _______, KC_LBRC, KC_7   , KC_8   , KC_9   , KC_RBRC,                                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
        XXXXXXX, KC_SCLN, KC_4   , KC_5   , KC_6   , KC_LSCR,                                     XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, XXXXXXX,
-       XXXXXXX, KC_DQUO, KC_1   , KC_2   , KC_3   , KC_INS , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ALGR, XXXXXXX, XXXXXXX,
+       XXXXXXX, KC_DQUO, KC_1   , KC_2   , KC_3   , KC_BSLS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ALGR, XXXXXXX, XXXXXXX,
                                   XXXXXXX, XXXXXXX, KC_DOT , KC_0   , KC_MINS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     ),
 
@@ -167,9 +168,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Functions
  */
     [_FUNCTION] = LAYOUT(
-       _______, KC_F12 , KC_F7  , KC_F8  , KC_F9  , KC_PSCR,                                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
+       _______, KC_F12 , KC_F7  , KC_F8  , KC_F9  , XXXXXXX,                                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
        XXXXXXX, KC_F11 , KC_F4  , KC_F5  , KC_F6  , KC_CAPS,                                     XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, XXXXXXX,
-       XXXXXXX, KC_F10 , KC_F1  , KC_F2  , KC_F3  , KC_PAUS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ALGR, XXXXXXX, XXXXXXX,
+       XXXXXXX, KC_F10 , KC_F1  , KC_F2  , KC_F3  , KC_INS , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ALGR, XXXXXXX, XXXXXXX,
                                   XXXXXXX, XXXXXXX, KC_APP , KC_SPC , KC_TAB , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     ),
 
