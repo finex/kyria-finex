@@ -104,7 +104,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                    HYP_PRS , KC_ENT  , LT_MEES , LT_NASP , LT_MOTA ,    LT_SYEN , LT_NUBS , LT_FUDE , XXXXXXX , KC_MEH
     ),
 
-*
+/*
  * Alternative Layer: Colemak DH
  */
     [_COLEMAK_DH] = LAYOUT(
@@ -265,6 +265,9 @@ void oled_task_user(void) {
                 break;
             case _FUNCTION:
                 oled_write_P(PSTR("Function\n"), false);
+                break;
+            case _BUTTON:
+                oled_write_P(PSTR("Button\n"), false);
                 break;
             case _ADJUST:
                 oled_write_P(PSTR("Adjust\n"), false);
