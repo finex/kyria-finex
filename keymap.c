@@ -70,26 +70,52 @@ enum layers {
 #define QHSF LSFT_T(KC_F)
 #define QHLX RALT_T(KC_X)
 // - Right
-#define QHGSCLN LGUI_T(KC_SCLN)
+#define QHGSCLN RGUI_T(KC_SCLN)
 #define QHAL LALT_T(KC_L)
-#define QHCK LCTL_T(KC_K)
-#define QHSJ LSFT_T(KC_J)
+#define QHCK RCTL_T(KC_K)
+#define QHSJ RSFT_T(KC_J)
 #define QHLD RALT_T(KC_DOT)
 
 // Home row mod tap Colemak
 // - Left
-#define QHGA LGUI_T(KC_A)
+/* #define QHGA LGUI_T(KC_A) */
 #define QHAR LALT_T(KC_R)
 #define QHCS LCTL_T(KC_S)
 #define QHST LSFT_T(KC_T)
 // - Right
-#define QHGO LGUI_T(KC_O)
+#define QHGO RGUI_T(KC_O)
 #define QHAI LALT_T(KC_I)
-#define QHCE LCTL_T(KC_E)
-#define QHSN LSFT_T(KC_N)
+#define QHCE RCTL_T(KC_E)
+#define QHSN RSFT_T(KC_N)
 
 // Mod tap
 #define HYP_PRS HYPR_T(KC_PSCR)
+
+
+// Fine tuning of TAPPING_TERM valuer on some home row modifiers to avoid errors during typing.
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+  // Ring fingers
+  case QHAS:
+  case QHAL:
+  case QHAR:
+  case QHAI:
+    return TAPPING_TERM + 200;
+  // Pinkies
+  case QHGSCLN:
+  case QHGA:
+  case QHGO:
+    return TAPPING_TERM + 50;
+  // Middle fingers
+  case QHCD:
+  case QHCK:
+  case QHAS:
+  case QHCE:
+    return TAPPING_TERM - 30;
+  default:
+    return TAPPING_TERM;
+  }
+}
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {

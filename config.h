@@ -36,7 +36,7 @@
 
 // Custom tapping term
 #define TAPPING_TERM 200
-// #define TAPPING_TERM_PER_KEY
+#define TAPPING_TERM_PER_KEY
 
 
 // Mouse key speed and acceleration.
