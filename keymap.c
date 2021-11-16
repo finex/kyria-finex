@@ -109,7 +109,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   // Middle fingers
   case QHCD:
   case QHCK:
-  case QHAS:
+  case QHCS:
   case QHCE:
     return TAPPING_TERM - 30;
   default:
