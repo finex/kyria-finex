@@ -126,7 +126,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_QWERTY] = LAYOUT(
      TG_BUTT , KC_Q    , KC_W    , KC_E    , KC_R    , KC_T    ,                                            KC_Y    , KC_U    , KC_I    , KC_O    , KC_P    , TG_NUM  ,
      KC_GRV  , QHGA    , QHAS    , QHCD    , QHSF    , KC_G    ,                                            KC_H    , QHSJ    , QHCK    , QHAL    , QHGSCLN , KC_QUOT ,
-     KC_LSPO , KC_Z    , QHLX    , KC_C    , KC_V    , KC_B    , LT_ADPD , KC_PGDU ,    KC_HOME , LT_ADEN , KC_N    , KC_M    , KC_COMM , QHLD    , KC_SLSH , KC_RSPC ,
+     KC_LSPO , KC_Z    , QHLX    , KC_C    , KC_V    , KC_B    , LT_ADPD , KC_PGUP ,    KC_HOME , LT_ADEN , KC_N    , KC_M    , KC_COMM , QHLD    , KC_SLSH , KC_RSPC ,
                                    HYP_PRS , KC_ENT  , LT_MEES , LT_NASP , LT_MOTA ,    LT_SYEN , LT_NUBS , LT_FUDE , XXXXXXX , KC_MEH
     ),
 
@@ -136,7 +136,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_COLEMAK_DH] = LAYOUT(
      TG_BUTT , KC_Q    , KC_W    , KC_F    , KC_P    , KC_B    ,                                            KC_J    , KC_L    , KC_U    , KC_Y    , KC_SCLN , TG_NUM  ,
      KC_GRV  , QHGA    , QHAR    , QHCS    , QHST    , KC_G    ,                                            KC_M    , QHSN    , QHCE    , QHAI    , QHGO    , KC_QUOT ,
-     KC_LSPO , KC_Z    , QHLX    , KC_C    , KC_D    , KC_V    , LT_ADPD , KC_PGDU ,    KC_HOME , LT_ADEN , KC_K    , KC_H    , KC_COMM , QHLD    , KC_SLSH , KC_RSPC ,
+     KC_LSPO , KC_Z    , QHLX    , KC_C    , KC_D    , KC_V    , LT_ADPD , KC_PGUP ,    KC_HOME , LT_ADEN , KC_K    , KC_H    , KC_COMM , QHLD    , KC_SLSH , KC_RSPC ,
                                    HYP_PRS , KC_ENT  , LT_MEES , LT_NASP , LT_MOTA ,    LT_SYEN , LT_NUBS , LT_FUDE , XXXXXXX , KC_MEH
     ),
 
