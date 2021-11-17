@@ -48,7 +48,7 @@
     {
       "y": -0.875,
       "x": 5,
-      "t": "#ffffff\n#ff0000\n#24d81b\n#1e82cf\n\n\n\n#b6890e"
+      "t": "#ffffff\n\n#24d81b\n#1e82cf\n\n\n\n#b6890e"
     },
     "T\n\n}\n]\n\n\n\nRedo",
     {
@@ -278,9 +278,9 @@
       "r": 30,
       "y": -2,
       "x": -0.5,
-      "t": "#ffffff\n\n#24d81b\n\n#777777"
+      "t": "#ffffff\n\n\n\n#777777"
     },
-    "↑\n\n\n\n⌥ Adjust"
+    "↓\n\n\n\n⌥ Adjust"
   ],
   [
     {
@@ -294,9 +294,9 @@
       "r": 45,
       "y": -2,
       "x": -0.5,
-      "t": "#ffffff\n\n#24d81b"
+      "t": "#ffffff"
     },
-    "↓"
+    "↑"
   ],
   [
     {
