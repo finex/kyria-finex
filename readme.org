@@ -15,7 +15,7 @@
 This keymap recreate the Miryoku layout with some extra keys on the Kyria keyboard.
 
 * Features
-[ TODO]
+[ TODO ]
 
 * Layout
 #+CAPTION: Redox FiNeX layout
@@ -24,6 +24,8 @@ This keymap recreate the Miryoku layout with some extra keys on the Kyria keyboa
 * Changelog
 - 2021/11/14
   First public release.
+- 2021/11/17
+  Minor fixes on layout.
 
 * Todo
 [ TODO ]
