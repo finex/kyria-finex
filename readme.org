@@ -19,13 +19,15 @@ This keymap recreate the Miryoku layout with some extra keys on the Kyria keyboa
 
 * Layout
 #+CAPTION: Redox FiNeX layout
-[[https://raw.githubusercontent.com/finex/kyria-finex/main/finex-kyria-miryoku.png]]
+[[https://raw.githubusercontent.com/finex/kyria-finex/main/images/finex-kyria-miryoku.png]]
 
 * Changelog
 - 2021/11/14
   First public release.
 - 2021/11/17
   Minor fixes on layout.
+- 2021/11/21
+  Removed "media" layer and reorganized "buttons" layer
 
 * Todo
 [ TODO ]

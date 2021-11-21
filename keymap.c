@@ -19,7 +19,7 @@
 enum layers {
     _QWERTY = 0,
     _COLEMAK_DH,
-    _MEDIA,
+    /* _MEDIA, */
     _NAVIGATION,
     _MOUSE,
     _SYMBOL,
@@ -29,7 +29,6 @@ enum layers {
     /* _AWES, */
     _ADJUST
 };
-
 
 /*
  * Custom keycodes
@@ -47,7 +46,7 @@ enum layers {
 // - Layer / Tap
 #define LT_ADEN LT(_ADJUST, KC_END)
 #define LT_ADPD LT(_ADJUST, KC_PGDN)
-#define LT_MEES LT(_MEDIA, KC_ESC)
+/* #define LT_MEES LT(_MEDIA, KC_ESC) */
 #define LT_NASP LT(_NAVIGATION, KC_SPACE)
 #define LT_MOTA LT(_MOUSE, KC_TAB)
 #define LT_SYEN LT(_SYMBOL, KC_ENTER)
@@ -90,6 +89,7 @@ enum layers {
 
 // Mod tap
 #define HYP_PRS HYPR_T(KC_PSCR)
+#define MT_CTES LCTL(KC_ESC)
 
 
 // Fine tuning of TAPPING_TERM valuer on some home row modifiers to avoid errors during typing.
@@ -127,7 +127,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      TG_BUTT , KC_Q    , KC_W    , KC_E    , KC_R    , KC_T    ,                                            KC_Y    , KC_U    , KC_I    , KC_O    , KC_P    , TG_NUM  ,
      KC_GRV  , QHGA    , QHAS    , QHCD    , QHSF    , KC_G    ,                                            KC_H    , QHSJ    , QHCK    , QHAL    , QHGSCLN , KC_QUOT ,
      KC_LSPO , KC_Z    , QHLX    , KC_C    , KC_V    , KC_B    , LT_ADPD , KC_PGUP ,    KC_HOME , LT_ADEN , KC_N    , KC_M    , KC_COMM , QHLD    , KC_SLSH , KC_RSPC ,
-                                   HYP_PRS , KC_ENT  , LT_MEES , LT_NASP , LT_MOTA ,    LT_SYEN , LT_NUBS , LT_FUDE , XXXXXXX , KC_MEH
+                                   HYP_PRS , KC_ENT  , MT_CTES , LT_NASP , LT_MOTA ,    LT_SYEN , LT_NUBS , LT_FUDE , KC_SPC  , KC_MEH
     ),
 
 /*
@@ -137,18 +137,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      TG_BUTT , KC_Q    , KC_W    , KC_F    , KC_P    , KC_B    ,                                            KC_J    , KC_L    , KC_U    , KC_Y    , KC_SCLN , TG_NUM  ,
      KC_GRV  , QHGA    , QHAR    , QHCS    , QHST    , KC_G    ,                                            KC_M    , QHSN    , QHCE    , QHAI    , QHGO    , KC_QUOT ,
      KC_LSPO , KC_Z    , QHLX    , KC_C    , KC_D    , KC_V    , LT_ADPD , KC_PGUP ,    KC_HOME , LT_ADEN , KC_K    , KC_H    , KC_COMM , QHLD    , KC_SLSH , KC_RSPC ,
-                                   HYP_PRS , KC_ENT  , LT_MEES , LT_NASP , LT_MOTA ,    LT_SYEN , LT_NUBS , LT_FUDE , XXXXXXX , KC_MEH
+                                   HYP_PRS , KC_ENT  , MT_CTES , LT_NASP , LT_MOTA ,    LT_SYEN , LT_NUBS , LT_FUDE , KC_SPC  , KC_MEH
     ),
 
-/*
- * Media
- */
-    [_MEDIA] = LAYOUT(
-       _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                     U_RDO  , U_PST  , U_CPY  , U_CUT  , U_UND  , _______,
-       XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,                                     XXXXXXX, KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT, XXXXXXX,
-       XXXXXXX, XXXXXXX, KC_ALGR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                                  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MSTP, KC_MPLY, KC_MUTE, XXXXXXX, XXXXXXX
-    ),
+/* /\* */
+/*  * Media */
+/*  *\/ */
+/*     [_MEDIA] = LAYOUT( */
+/*        _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                     U_RDO  , U_PST  , U_CPY  , U_CUT  , U_UND  , _______, */
+/*        XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,                                     XXXXXXX, KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT, XXXXXXX, */
+/*        XXXXXXX, XXXXXXX, KC_ALGR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, */
+/*                                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MSTP, KC_MPLY, KC_MUTE, XXXXXXX, XXXXXXX */
+/*     ), */
 
 /*
  * Navigation
@@ -204,10 +204,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Button
  */
     [_BUTTON] = LAYOUT(
-       _______, U_UND  , U_CUT  , U_CPY  , U_PST  , U_RDO  ,                                     U_RDO  , U_PST  , U_CPY  , U_CUT  , U_UND  , _______,
-       XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,                                     XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, XXXXXXX,
-       XXXXXXX, U_UND  , U_CUT  , U_CPY  , U_PST  , U_RDO  , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, U_RDO  , U_PST  , U_CPY  , U_CUT  , U_UND  , XXXXXXX,
-                                  XXXXXXX, _______, KC_BTN2, KC_BTN3, KC_BTN1, KC_BTN1, KC_BTN3, KC_BTN2, _______, XXXXXXX
+       _______, XXXXXXX, KC_UP  , XXXXXXX, XXXXXXX, XXXXXXX,                                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
+       XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, C(KC_F), XXXXXXX,                                     XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, XXXXXXX,
+       XXXXXXX, U_UND  , U_CUT  , U_CPY  , U_PST  , U_RDO  , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+                                  XXXXXXX, _______, KC_BTN2, KC_BTN3, KC_BTN1, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     ),
 
 
@@ -215,9 +215,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Adjust Layer: Default layer settings, RGB
  */
     [_ADJUST] = LAYOUT(
-      XXXXXXX, QWERTY , COLEMAK, XXXXXXX, XXXXXXX, XXXXXXX,                                    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX,
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                    RGB_TOG, RGB_SAI, RGB_HUI, RGB_VAI,  RGB_MOD, XXXXXXX,
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RGB_SAD, RGB_HUD, RGB_VAD, RGB_RMOD, XXXXXXX,
+      XXXXXXX, QWERTY , COLEMAK, XXXXXXX, XXXXXXX, XXXXXXX,                                    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                    RGB_TOG, RGB_SAI, RGB_HUI, RGB_VAI, RGB_MOD, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RGB_SAD, RGB_HUD, RGB_VAD,RGB_RMOD, XXXXXXX,
                                  XXXXXXX, XXXXXXX, XXXXXXX,XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     ),
 
@@ -274,9 +274,9 @@ void oled_task_user(void) {
             case _COLEMAK_DH:
                 oled_write_P(PSTR("Colemak-DH\n"), false);
                 break;
-            case _MEDIA:
-                oled_write_P(PSTR("Media\n"), false);
-                break;
+            /* case _MEDIA: */
+            /*     oled_write_P(PSTR("Media\n"), false); */
+            /*     break; */
             case _NAVIGATION:
                 oled_write_P(PSTR("Nav\n"), false);
                 break;
