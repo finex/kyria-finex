@@ -89,7 +89,7 @@ enum layers {
 
 // Mod tap
 #define HYP_PRS HYPR_T(KC_PSCR)
-#define MT_CTES LCTL(KC_ESC)
+#define MT_CTES LCTL_T(KC_ESC)
 
 
 // Fine tuning of TAPPING_TERM valuer on some home row modifiers to avoid errors during typing.
