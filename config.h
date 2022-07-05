@@ -31,6 +31,8 @@
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
 #define TAPPING_FORCE_HOLD
 
+#define TAPPING_FORCE_HOLD_PER_KEY
+
 // Recommended for heavy chording
 #define QMK_KEYS_PER_SCAN 4
 
