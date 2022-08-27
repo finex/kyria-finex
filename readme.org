@@ -12,7 +12,7 @@
 - [[#finex-qmk-layouts][FiNeX QMK Layouts]]
 
 * Customized Miryoku layoup for Kyria keyboard by Leonardo (FiNeX) Finetti
-This keymap recreate the Miryoku layout with some extra keys on the Kyria keyboard.
+This keymap recreate the Miryoku layout with some extra keys on the Kyria keyboard and using some tweaking taken from my Redox custom layout.
 
 * Features
 [ TODO ]
@@ -28,9 +28,11 @@ This keymap recreate the Miryoku layout with some extra keys on the Kyria keyboa
   Minor fixes on layout.
 - 2021/11/21
   Removed "media" layer and reorganized "buttons" layer
+- 2022/08/27
+  Merged experimental branch to main branch: removed mouse layer and minor tuning.
 
 * Todo
-[ TODO ]
+- Update image preview and k-l-e JSON file
 
 * FiNeX QMK Layouts
 All my custom QMK layouts are available on the following repo:  https://github.com/finex/qmk-keyboard-layouts-finex
